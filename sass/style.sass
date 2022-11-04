@@ -16,25 +16,82 @@ body
   padding: 4rem
   .wrapper
     width: 40rem
-    height: 40rem
     margin: 0 auto // center wrapper horisontal
-    padding: 1rem
+    padding: 4rem
+    position: relative
     border: 2px dotted #333
+
+    // text-align: center
     // display: grid // center child horisontal
     // display: flex // center child horisontal
-    // justify-content: center // center child horisontal
-    // text-align: center
-    // display: table
-    position: relative
+    // justify-content: center // center child horisontal (flex)
+    // display: table // center child verticale
     .child
       width: 2rem
       height: 2rem
       background: purple
-      // justify-self: center // center child horisontal
-      // display: table-cell
-      // vertical-align: middle
+
+      // justify-self: center // center child horisontal (grid)
+      // display: table-cell // center child verticale (table)
+      // vertical-align: middle // center child horisontal (table)
       position: absolute
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
-      
+  .buttons-wrapper
+    width: 100%
+    margin-top: 4rem
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 4rem
+    .btn
+      font-size: 2.2rem
+      font-weight: 400
+      padding: 1.6rem 4rem
+      border: none
+      border-radius: 4rem
+      cursor: pointer
+      &-hollow
+        background: #ffffff
+        border: 2px solid #7010da
+        color: #7010da
+      &-icon
+        padding: 3rem
+        position: relative
+        border-radius: 50%
+        img
+          width: 3rem 
+          fill: #ffffff
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+        &-solid
+          background: #7010da
+        &-outline
+          background: #f0f0f0
+          border: 1px solid #000000
+          box-shadow: 1px 1px .5rem rgba(0, 0, 0, 0.5)
+          &:active
+            box-shadow: 1px 1px .5rem rgba(0, 0, 0, 0)
+      &-solid
+        &-square
+          border-radius: .5rem
+          background: #7010da
+          color: #ffffff
+        &.active
+          background: #7010da
+          color: #ffffff
+          transition: .3s all
+          &:hover
+            background: #f0f0f0
+            color: rgb(112, 16, 218)
+            box-shadow: 1px 1px .6rem rgba(0, 0, 0, .6)
+          &:active
+            background: rgba(112, 16, 218, 1)
+            color: #ffffff
+            box-shadow: 1px 1px .6rem rgba(0, 0, 0, 0)
+        &.disabled
+          background: #eee
+          color: #777

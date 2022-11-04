@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -21,16 +20,13 @@ body {
   height: 100%;
   padding: 4rem;
 }
-
 .container .wrapper {
   width: 40rem;
-  height: 40rem;
   margin: 0 auto;
-  padding: 1rem;
-  border: 2px dotted #333;
+  padding: 4rem;
   position: relative;
+  border: 2px dotted #333;
 }
-
 .container .wrapper .child {
   width: 2rem;
   height: 2rem;
@@ -38,7 +34,74 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-/*# sourceMappingURL=style.css.map */
+.container .buttons-wrapper {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.container .buttons-wrapper .btn {
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 1.6rem 4rem;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+}
+.container .buttons-wrapper .btn-hollow {
+  background: #ffffff;
+  border: 2px solid #7010da;
+  color: #7010da;
+}
+.container .buttons-wrapper .btn-icon {
+  padding: 3rem;
+  position: relative;
+  border-radius: 50%;
+}
+.container .buttons-wrapper .btn-icon img {
+  width: 3rem;
+  fill: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .buttons-wrapper .btn-icon-solid {
+  background: #7010da;
+}
+.container .buttons-wrapper .btn-icon-outline {
+  background: #f0f0f0;
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.5);
+}
+.container .buttons-wrapper .btn-icon-outline:active {
+  box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0);
+}
+.container .buttons-wrapper .btn-solid-square {
+  border-radius: 0.5rem;
+  background: #7010da;
+  color: #ffffff;
+}
+.container .buttons-wrapper .btn-solid.active {
+  background: #7010da;
+  color: #ffffff;
+  transition: 0.3s all;
+}
+.container .buttons-wrapper .btn-solid.active:hover {
+  background: #f0f0f0;
+  color: rgb(112, 16, 218);
+  box-shadow: 1px 1px 0.6rem rgba(0, 0, 0, 0.6);
+}
+.container .buttons-wrapper .btn-solid.active:active {
+  background: rgb(112, 16, 218);
+  color: #ffffff;
+  box-shadow: 1px 1px 0.6rem rgba(0, 0, 0, 0);
+}
+.container .buttons-wrapper .btn-solid.disabled {
+  background: #eee;
+  color: #777;
+}/*# sourceMappingURL=style.css.map */
